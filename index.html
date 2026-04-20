@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcards app</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+  <header>
+    <h1>Flashcard Skeleton</h1>
+    <button id="btn-new-deck">New Deck</button>
+  </header>
+
+  <main>
+    <aside>
+      <h3>Decks</h3>
+      <ul id="deck-list"></ul>
+    </aside>
+
+    <section>
+      <div>
+        <h2 id="deck-title">No Decks</h2>
+        <div class="toolbar" style="margin-top: 15px;">
+          <button class="btn-outline" id="btn-edit-deck" disabled>Edit</button>
+          <button class="btn-danger" id="btn-del-deck" disabled>Delete</button>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <button id="btn-new-card" disabled>Add Card</button>
+        <button class="btn-outline" id="btn-edit-card" disabled>Edit</button>
+        <button class="btn-danger" id="btn-del-card" disabled>Delete</button>
+      </div>
+
+      <div class="card-container" id="card-container">
+        <div class="card" id="flashcard">
+          <div class="card-face card-front" id="card-front">Empty</div>
+          <div class="card-face card-back" id="card-back">Empty</div>
+        </div>
+      </div>
+
+      <div class="toolbar center">
+        <button class="btn-outline" id="btn-prev">Prev</button>
+        <button class="btn-outline" id="btn-flip">Flip</button>
+        <button class="btn-outline" id="btn-next">Next</button>
+      </div>
+      <p id="status">0 / 0</p>
+    </section>
+  </main>
+
+  <div class="modal" id="modal-deck">
+    <div class="modal-content">
+      <h3 id="modal-deck-title">Deck</h3>
+      <input type="text" id="input-deck-name" placeholder="Deck Name" autocomplete="off">
+      <div class="toolbar" style="justify-content: flex-end; margin-top: 10px;">
+        <button class="btn-outline btn-cancel">Cancel</button>
+        <button id="btn-save-deck">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-card">
+    <div class="modal-content">
+      <h3 id="modal-card-title">Card</h3>
+      <textarea id="input-card-front" placeholder="Front Side"></textarea>
+      <textarea id="input-card-back" placeholder="Back Side"></textarea>
+      <div class="toolbar" style="justify-content: flex-end; margin-top: 10px;">
+        <button class="btn-outline btn-cancel">Cancel</button>
+        <button id="btn-save-card">Save</button>
+      </div>
+    </div>
+  </div>
+  <script src="app.js" defer></script>
+</body>
+</html>
